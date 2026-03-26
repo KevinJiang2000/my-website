@@ -1,0 +1,24 @@
+---
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/projects-publications", label: "Projects & Publications" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
+];
+---
+
+<header class="border-b border-neutral-800">
+  <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+    <a href="/" class="text-sm font-medium tracking-wide text-neutral-100">
+      Weihang Jiang
+    </a>
+    <nav class="flex gap-6 text-m text-neutral-400">
+      {navItems.map((item) => (
+        <a href={item.href} class="transition hover:text-neutral-100">
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>

@@ -1,11 +1,61 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { getCollection } from "astro:content";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 2);
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Weihang Jiang">
+  <Hero />
+
+  <section class="mx-auto max-w-5xl px-6 py-8">
+    <h2 class="text-2xl font-semibold tracking-tight">Selected Projects</h2>
+    <div class="mt-6 grid gap-6">
+      <ProjectCard
+        title="EEG Decoding of Color Representation"
+        year="2024–2026"
+        description="Research on early neural representations of hue using EEG decoding and computational analysis."
+        tags={["EEG", "Neuroscience", "Python", "MATLAB"]}
+      />
+      <ProjectCard
+        title="Spike Sorting with Spiking Neural Networks"
+        year="2023"
+        description="Undergraduate thesis project on spike classification stability and optimal conditions for spike sorting."
+        tags={["SNN", "Signal Processing", "Python"]}
+      />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-6 py-16">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-semibold tracking-tight">Recent Writing</h2>
+      <a href="/blog" class="text-sm text-neutral-400 transition hover:text-neutral-100">
+        View all
+      </a>
+    </div>
+
+    <div class="mt-6 space-y-4">
+      {posts.map((post) => (
+        <a
+          href={`/blog/${post.id}/`}
+          class="block rounded-2xl border border-neutral-800 p-5 transition hover:border-neutral-700 hover:bg-neutral-900/40"
+        >
+          <h3 class="text-lg font-medium text-neutral-100">{post.data.title}</h3>
+          <p class="mt-2 text-neutral-400">{post.data.description}</p>
+          <p class="mt-3 text-sm text-neutral-500">
+            {post.data.pubDate.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

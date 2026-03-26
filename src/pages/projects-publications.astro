@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<BaseLayout title="projects-publications | Weihang Jiang">
+  <main class="mx-auto max-w-5xl px-6 py-20">
+    <h1 class="text-4xl font-semibold tracking-tight">Projects</h1>
+    <p class="mt-4 max-w-5xl text-neutral-400 leading-7">
+      Selected research and technical projects across neuroscience, machine learning,
+      and software-related work.
+    </p>
+
+    <div class="mt-5 grid gap-6 text-lg">
+      <ProjectCard
+        title="EEG Decoding of Color Representation"
+        year="2023–2026"
+        description="Master thesis of early neural representations of hue using EEG decoding, confusion-matrix analysis, and computational modeling."
+        tags={["EEG", "Machine learning", "Mathematical Statistics", "Signal Processing"]}
+      />
+
+      <ProjectCard
+        title="Spike Sorting with Spiking Neural Networks"
+        year="2023"
+        description="Undergraduate thesis research exploring spike classification stability and optimal conditions for spike sorting with SNN-based approaches."
+        tags={["SNN", "Signal Processing", "Machine learning"]}
+      />
+
+      <ProjectCard
+        title="Movie Recommendation with KNN"
+        year="2021"
+        description="A practical recommendation project using one-hot encoding and KNN methods during an AI training camp."
+        tags={["Machine Learning", "Recommendation"]}
+      />
+    </div>
+
+    <h1 class="text-4xl font-semibold mt-10">Publications</h1>
+    <div class="mt-5 space-y-6">
+      <section class="rounded-xl border border-neutral-800 p-6">
+        <h2 class="text-lg font-semibold">
+          Early EEG hue representations for single-color stimuli are consistent with
+          low-level mechanism-like coding
+        </h2>
+        <h2 class="text-lg font-medium mt-2">
+          Weihang Jiang, Takahiro Nagai
+        </h2>
+        <p class="mt-2 text-sm text-neutral-500">
+          Manuscript / Journal submission
+        </p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>

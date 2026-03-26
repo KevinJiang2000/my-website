@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  year?: string;
+  tags?: string[];
+}
+
+const { title, description, year, tags = [] } = Astro.props;
+---
+
+<article class="rounded-2xl border border-neutral-800 p-6 transition hover:border-neutral-700 hover:bg-neutral-900/40">
+  <div class="flex items-start justify-between gap-4">
+    <h3 class="text-xl font-medium text-neutral-100">{title}</h3>
+    {year && <span class="text-sm text-neutral-500">{year}</span>}
+  </div>
+
+  <p class="mt-4 leading-7 text-neutral-400">
+    {description}
+  </p>
+
+  {tags.length > 0 && (
+    <div class="mt-5 flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <span class="rounded-full border border-neutral-700 px-3 py-1 text-xs text-neutral-400">
+          {tag}
+        </span>
+      ))}
+    </div>
+  )}
+</article>
