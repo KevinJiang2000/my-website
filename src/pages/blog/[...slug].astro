@@ -29,11 +29,11 @@ const { Content } = await render(post);
       {post.data.title}
     </h1>
 
-    <p class="mt-6 text-lg leading-8 text-neutral-400">
+    <p class="mt-6 text-xl leading-8 text-neutral-400">
       {post.data.description}
     </p>
 
-    <article class="prose prose-invert mt-12 max-w-none prose-headings:tracking-tight prose-p:text-neutral-300 prose-a:text-neutral-100 prose-strong:text-neutral-100">
+    <article class="text-xl prose prose-invert mt-12 max-w-none prose-headings:tracking-tight prose-p:text-neutral-300 prose-a:text-neutral-100 prose-strong:text-neutral-100">
       <Content />
     </article>
   </main>

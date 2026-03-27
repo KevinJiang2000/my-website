@@ -8,14 +8,33 @@ interface Props {
 
 const { title = "Weihang Jiang" } = Astro.props;
 ---
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
+  <body class="relative min-h-screen bg-neutral-950 text-neutral-100 antialiased">
+    <!-- Background -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+      <!-- base -->
+      <div class="absolute inset-0 bg-[#0a0a0a]"></div>
+
+      <!-- top ambient light -->
+      <div class="absolute inset-x-0 top-0 h-[320px] bg-[radial-gradient(ellipse_at_top,rgba(125,211,252,0.08),transparent_70%)]"></div>
+
+      <!-- left glow -->
+      <div class="absolute left-[-140px] top-[-140px] h-[520px] w-[520px] rounded-full bg-sky-400/6 blur-[170px]"></div>
+
+      <!-- right glow -->
+      <div class="absolute right-[-160px] bottom-[-160px] h-[560px] w-[560px] rounded-full bg-indigo-400/6 blur-[180px]"></div>
+
+      <!-- center ambient -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.035),transparent_60%)]"></div>
+
+      <!-- subtle grid -->
+      <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+    </div>
     <Header />
     <slot />
   </body>

@@ -21,33 +21,28 @@ import ProjectCard from "../components/ProjectCard.astro";
 
       <ProjectCard
         title="Spike Sorting with Spiking Neural Networks"
-        year="2023"
+        year="2022-2023"
         description="Undergraduate thesis research exploring spike classification stability and optimal conditions for spike sorting with SNN-based approaches."
         tags={["SNN", "Signal Processing", "Machine learning"]}
-      />
-
-      <ProjectCard
-        title="Movie Recommendation with KNN"
-        year="2021"
-        description="A practical recommendation project using one-hot encoding and KNN methods during an AI training camp."
-        tags={["Machine Learning", "Recommendation"]}
       />
     </div>
 
     <h1 class="text-4xl font-semibold mt-10">Publications</h1>
-    <div class="mt-5 space-y-6">
-      <section class="rounded-xl border border-neutral-800 p-6">
-        <h2 class="text-lg font-semibold">
-          Early EEG hue representations for single-color stimuli are consistent with
-          low-level mechanism-like coding
-        </h2>
-        <h2 class="text-lg font-medium mt-2">
-          Weihang Jiang, Takahiro Nagai
-        </h2>
-        <p class="mt-2 text-sm text-neutral-500">
-          Manuscript / Journal submission
-        </p>
-      </section>
+    <div class="mt-5 grid gap-6 text-lg">
+      <ProjectCard
+        title="Early EEG hue representations for single-color stimuli are consistent with low-level mechanism-like coding (Under Reviewing)"
+        year="2026"
+        description="Weihang Jiang, Takahiro Nagai"
+        tags={["EEG", "Machine learning", "Mathematical Statistics", "Signal Processing"]}
+      />
+
+      <ProjectCard
+        title="脳波デコーディングに基づく視覚野の色選択性の解析 (Academic Presentation)"
+        year="2025"
+        description="Weihang Jiang, Takehiro Nagai, 栗木一郎, 日本視覚学会2025年冬季大会, VISION, Vol. 37, No. 1, p. 30, Jan. 2025.
+        https://doi.org/10.24636/vision.37.1_9"
+        tags={["EEG", "Machine learning", "Mathematical Statistics", "Signal Processing"]}
+      />
     </div>
   </main>
 </BaseLayout>
