@@ -13,7 +13,7 @@ const navItems = [
     <a href="/" class="text-sm font-medium tracking-wide text-neutral-100">
       Weihang Jiang
     </a>
-    <nav class="flex gap-6 text-m text-neutral-400">
+    <nav class="flex flex-nowrap gap-3 sm:gap-6 text-sm sm:text-base text-neutral-400 overflow-x-auto whitespace-nowrap">
       {navItems.map((item) => (
         <a href={item.href} class="transition hover:text-neutral-100">
           {item.label}

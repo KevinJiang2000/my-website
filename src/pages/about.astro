@@ -3,143 +3,144 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="About | Weihang Jiang">
-  <main class="mx-auto max-w-5xl px-6 py-20 text-lg">
-    <h1 class="text-4xl font-bold tracking-tight">About</h1>
+  <main class="mx-auto max-w-5xl px-4 sm:px-6 py-16 sm:py-20 text-base sm:text-lg">
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">About</h1>
     
-    <section class="mt-10 space-y-6 text-neutral-300 leading-relaxed text-xl">  
-    <p>
-      I am a technology consultant with a background in software engineering and artificial intelligence.
-      I am particularly interested in building scalable systems and applying technology to solve real-world problems.
-    </p>
+    <section class="mt-8 sm:mt-10 space-y-5 sm:space-y-6 text-neutral-300 leading-relaxed text-lg sm:text-xl">  
+      <p>
+        I am a technology consultant with a background in software engineering and artificial intelligence.
+        I am particularly interested in building scalable systems and applying technology to solve real-world problems.
+      </p>
 
-    <p>
-      My academic experience includes research on EEG-based decoding of color representation in the visual system.
-      which reflects my broader interest in human perception and data-driven understanding of complex systems.
-    </p>
+      <p>
+        My academic experience includes research on EEG-based decoding of color representation in the visual system,
+        which reflects my broader interest in human perception and data-driven understanding of complex systems.
+      </p>
 
-    <p>
-      Having studied in both China and Japan, I bring an international perspective and enjoy working in cross-cultural environments.
-      I am especially interested in bridging technology and business n global environments.
-    </p>
+      <p>
+        Having studied in both China and Japan, I bring an international perspective and enjoy working in cross-cultural environments.
+        I am especially interested in bridging technology and business in global environments.
+      </p>
     </section>
     
-    <section class="mt-20">
-      <h2 class="text-4xl font-bold text-neutral-100">Position</h2>
-      <div class="space-y-8 text-neutral-300 max-w-[1000px] mx-auto">
-        <div class="flex items-center justify-start gap-30">
-          <div class="w-[520px] text-center">
-            <h3 class="text-neutral-100 text-2xl font-semibold mx-auto flex text-left">
+    <section class="mt-16 sm:mt-20">
+      <h2 class="text-3xl sm:text-4xl font-bold text-neutral-100">Position</h2>
+      <div class="mt-8 space-y-10 text-neutral-300 max-w-[1000px] mx-auto">
+        <div class="flex flex-col md:flex-row items-center md:items-center justify-center">
+          <div class="w-full md:max-w-[520px] text-center md:text-left">
+            <h3 class="text-neutral-100 text-xl sm:text-2xl font-semibold">
               2026 - present
             </h3>
-            <h3 class="text-neutral-100 text-3xl font-semibold mx-auto mt-6">
+            <h3 class="text-neutral-100 text-2xl sm:text-3xl font-semibold mt-4 sm:mt-5">
               Accenture Japan
             </h3>
-            <p class="text-neutral-400 text-xl font-semibold mt-2">
+            <p class="text-neutral-400 text-lg sm:text-xl font-semibold mt-2">
               Technology Group Intelligence Engineering Services Analyst
             </p>
           </div>
-          <div class="w-[240px] flex justify-center">
+          <div class="w-full md:w-[240px] flex justify-center mt-6 md:mt-0 md:ml-20 md:mt-10">
             <img 
               src="/logos/acc.png" 
               alt="Accenture" 
-              class="w-80 h-45 object-contain flex-shrink-0 bg-white p-3 rounded-lg shadow-sm mt-5"
+              class="w-48 sm:w-64 md:w-72 h-auto object-contain flex-shrink-0 bg-white p-3 rounded-lg shadow-sm"
             />
           </div>
         </div>
       </div>
     </section>
     
-    <section class="mt-20">
-      <h2 class="text-4xl font-bold text-neutral-100">Education</h2>
-      <div class="space-y-8 text-neutral-300 max-w-[1000px] mx-auto">
+    <section class="mt-16 sm:mt-20">
+      <h2 class="text-3xl sm:text-4xl font-bold text-neutral-100">Education</h2>
+      <div class="mt-8 space-y-10 text-neutral-300 max-w-[1000px] mx-auto">
         <!-- Tokyo Tech -->
-        <div class="flex items-center justify-start gap-30">
-          <div class="w-[520px] text-center">
-            <h3 class="text-neutral-100 text-2xl font-semibold mx-auto flex text-left">
+        <div class="flex flex-col md:flex-row items-center md:items-center justify-center">
+          <div class="w-full md:max-w-[520px] text-center md:text-left">
+            <h3 class="text-neutral-100 text-xl sm:text-2xl font-semibold">
               2023 - 2025
             </h3>
-            <h3 class="text-neutral-100 text-3xl font-semibold mx-auto mt-5">
+            <h3 class="text-neutral-100 text-2xl sm:text-3xl font-semibold mt-4 sm:mt-5">
               Institute of Science Tokyo
             </h3>
-            <h3 class="text-neutral-100 text-3xl font-semibold mt-1">
+            <h3 class="text-neutral-100 text-2xl sm:text-3xl font-semibold mt-1">
               (Tokyo Institute of Technology)
             </h3>
-            <p class="text-neutral-400 text-xl font-semibold mt-2">
+            <p class="text-neutral-400 text-lg sm:text-xl font-semibold mt-2">
               M.Eng. in Information and Communications Engineering
             </p>
           </div>
-          <div class="w-[240px] flex justify-center">
+          <div class="w-full md:w-[240px] flex justify-center mt-6 md:mt-0 md:ml-20 md:mt-5">
             <img 
               src="/logos/ScienceTokyo.png" 
               alt="Tokyo Institute of Technology" 
-              class="w-80 h-40 object-contain flex-shrink-0 mt-10"
+              class="w-48 sm:w-64 md:w-72 h-auto object-contain flex-shrink-0"
             />
           </div>
         </div>
 
         <!-- Ritsumeikan -->
-        <div class="flex items-center justify-start gap-30">
-          <div class="w-[520px] text-center">
-            <h3 class="text-neutral-100 text-2xl font-semibold mx-auto flex text-left">
+        <div class="flex flex-col md:flex-row items-center md:items-center justify-center">
+          <div class="w-full md:max-w-[520px] text-center md:text-left">
+            <h3 class="text-neutral-100 text-xl sm:text-2xl font-semibold">
               2021 - 2023
             </h3>
-            <h3 class="text-neutral-100 text-3xl font-semibold mx-auto mt-3">
+            <h3 class="text-neutral-100 text-2xl sm:text-3xl font-semibold mt-5">
               Ritsumeikan University
             </h3>
-            <p class="text-neutral-400 text-xl font-semibold mt-2">
+            <p class="text-neutral-400 text-lg sm:text-xl font-semibold mt-2">
               B.Eng. in Artificial and Natural Intelligence
             </p>
           </div>
-          <div class="w-[240px] flex justify-center">
+          <div class="w-full md:w-[240px] flex justify-center mt-6 md:mt-0 md:ml-20">
             <img 
               src="/logos/Ritsumei.png" 
               alt="Ritsumeikan University" 
-              class="w-80 h-40 object-contain flex-shrink-0 mt-3"
+              class="w-48 sm:w-64 md:w-72 h-auto object-contain flex-shrink-0"
             />
           </div>
         </div>
 
         <!-- DLUT -->
-        <div class="flex items-center justify-start gap-30">
-          <div class="w-[520px] text-center">
-            <h3 class="text-neutral-100 text-2xl font-semibold mx-auto flex text-left">
+        <div class="flex flex-col md:flex-row items-center md:items-center justify-center">
+          <div class="w-full md:max-w-[520px] text-center md:text-left">
+            <h3 class="text-neutral-100 text-xl sm:text-2xl font-semibold">
               2019 - 2023
             </h3>          
-            <h3 class="text-neutral-100 text-3xl font-semibold mt-3">
+            <h3 class="text-neutral-100 text-2xl sm:text-3xl font-semibold mt-5">
               Dalian University of Technology
             </h3>
-            <p class="text-neutral-400 text-xl font-semibold mt-2">
+            <p class="text-neutral-400 text-lg sm:text-xl font-semibold mt-2">
               B.Eng. in Software Engineering
             </p>
           </div>
-          <div class="w-[240px] flex justify-center">
+          <div class="w-full md:w-[240px] flex justify-center mt-6 md:mt-0 md:ml-20">
             <img 
               src="/logos/DUT.png" 
-              alt="Dalian University of Technology"                 class="w-45 h-45 object-contain flex-shrink-0 mt-3"
+              alt="Dalian University of Technology"
+              class="w-32 sm:w-40 md:w-44 h-auto object-contain flex-shrink-0"
             />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mt-14">
-      <h2 class="text-2xl font-medium text-neutral-100">Research Interests</h2>
-      <p class="mt-4 text-neutral-300 leading-8 text-xl">
+    <section class="mt-12 sm:mt-14">
+      <h2 class="text-xl sm:text-2xl font-medium text-neutral-100">Research Interests</h2>
+      <p class="mt-4 text-neutral-300 leading-7 sm:leading-8 text-lg sm:text-xl">
         EEG decoding, Visual perception, Color vision, Cognitive neuroscience, Computational analysis.
       </p>
     </section>
 
-    <section class="mt-14">
-      <h2 class="text-2xl font-medium text-neutral-100">Professional Interests</h2>
-      <p class="mt-4 text-neutral-300 leading-8 text-xl">
+    <section class="mt-12 sm:mt-14">
+      <h2 class="text-xl sm:text-2xl font-medium text-neutral-100">Professional Interests</h2>
+      <p class="mt-4 text-neutral-300 leading-7 sm:leading-8 text-lg sm:text-xl">
         Applied technology, Solution Architecture, Data-driven problem solving, International technology consulting.
       </p>
     </section>
 
-    <section class="mt-14">
-      <h2 class="text-2xl font-medium text-neutral-100">Languages</h2>
-      <p class="mt-4 text-neutral-300 leading-8 text-xl">
-        Chinese (native), English, Japanese(N1)
+    <section class="mt-12 sm:mt-14">
+      <h2 class="text-xl sm:text-2xl font-medium text-neutral-100">Languages</h2>
+      <p class="mt-4 text-neutral-300 leading-7 sm:leading-8 text-lg sm:text-xl">
+        Chinese (native), English, Japanese (N1)
       </p>
     </section>
   </main>
