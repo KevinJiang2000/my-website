@@ -13,6 +13,19 @@ const { title = "Weihang Jiang" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1RH1XKT39X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag(...args: unknown[]) {
+        window.dataLayer.push(args);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'G-1RH1XKT39X');
+    </script>
   </head>
   <body class="relative min-h-screen bg-neutral-950 text-neutral-100 antialiased">
     <!-- Background -->
